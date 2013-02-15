@@ -1,0 +1,118 @@
+/* =============================================
+ * This is essientally a theme for a given project
+ * Make a zayso.css later and then just change a few things like background image
+ */
+
+/* ============================================
+ * Your basic reset and a few global styles
+ */
+html, body,
+a, image, p,
+div, ul, li,
+h1,h2,h3,h4,h5,
+fieldset, form, label, legend 
+{
+    margin:  0;
+    padding: 0;
+    border:  0;
+    vertical-align: baseline; 
+}
+h1, h2, h3, h4, h5, p
+{
+    padding-left: 20px;
+    padding-top:  10px;
+}
+table
+{
+    margin-left: 20px; /* Padding no workee */
+}
+/* ============================================================
+ * Header section
+ */
+div.cerad_zayso_header
+{
+    
+}
+/* Copied from ng site */
+div.cerad_zayso_header_title
+{
+    color:     #ef3e33;
+    font-size:    32px;
+    line-height:  28px;
+    float:        left;
+    display:     block;
+    margin-top:   15px;
+    margin-right: 60px;
+}
+/* ============================================================
+ * The top menu
+ */
+div.cerad_zayso_top_menu
+{
+    background-color: palegoldenrod ;
+    height:           50px;
+}
+div.cerad_zayso_top_menu ul
+{
+    list-style-type: none;
+    padding-top:  15px;
+    padding-left: 20px;
+}
+div.cerad_zayso_top_menu ul.cerad_zayso_top_menu_left
+{
+    float: left;
+}
+div.cerad_zayso_top_menu ul.cerad_zayso_top_menu_right
+{
+    float: right;
+}
+div.cerad_zayso_top_menu li
+{
+    float: left;
+    padding-right: 10px;
+}
+/* =============================================
+ * Main content
+ */
+div.cerad_zayso_content
+{
+    background-image: url('/bundles/ceradzayso/images/NatGames2014Beach.jpg');
+    background-color: lightcyan;
+    height:           550px;
+}
+div.cerad_zayso_content p
+{
+    font-weight: 600;
+    width:       700px;
+}
+/* ===========================================
+ * Admin content
+ */
+div.cerad_zayso_content_admin
+{
+    background-image: none;
+    background-color: lightyellow;
+    height:           550px;
+}
+div.cerad_zayso_content_admin p
+{
+    font-weight: 600;
+    width:       700px;
+}
+/* ===============================================
+ * Rained out styling
+ */
+div.rained_out
+{
+    width:      700px;
+    margin-left: 20px;
+    
+    /* Basically does nothing */
+    display:          block;
+    height:           200;
+    background-image: none;
+}
+div.rained_out p
+{
+    margin-bottom: 10px;
+}

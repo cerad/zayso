@@ -10,6 +10,7 @@
 
 /web/info.php
 /composer.lock
+/.sass-cache
 /app/SymfonyRequirements.php
 /app/check.php
 /app/phpunit.xml
