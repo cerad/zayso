@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Zayso Layout{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('bundles/ceradaccount/css/account.css') }}" media="all" />
+<style>
+html, body,
+a, image, p,
+div, ul, li,
+h1,h2,h3,h4,h5,
+fieldset, form, label, legend 
+{
+  margin:  0;
+  padding: 0;
+  border:  0;
+  vertical-align: baseline; 
+}
+h1, h2, h3, h4, h5, p
+{
+    padding-left: 20px;
+    padding-top:  10px;
+}
+table
+{
+    margin-left: 20px; /* Padding no workee */
+}    
+div.cerad_zayso_top_menu
+{
+    background-color: palegoldenrod ;
+    height:           50px;
+}
+div.cerad_zayso_top_menu ul
+{
+    list-style-type: none;
+    padding-top:  15px;
+    padding-left: 20px;
+}
+div.cerad_zayso_top_menu ul.cerad_zayso_top_menu_left
+{
+    float: left;
+}
+div.cerad_zayso_top_menu ul.cerad_zayso_top_menu_right
+{
+    float: right;
+}
+div.cerad_zayso_top_menu li
+{
+    float: left;
+    padding-right: 10px;
+}
+div.cerad_zayso_content
+{
+    background-image: url('/bundles/ceradzayso/images/NatGames2014Beach.jpg');
+    height: 550px;
+}
+div.cerad_zayso_content p
+{
+    font-weight: 600;
+    width:       700px;
+}
+/* ===========================================
+ * Admin styling
+ */
+div.cerad_zayso_content_admin
+{
+    background-image: none;
+}
+
+/* ===============================================
+ * Rained out styling
+ */
+div.rained_out
+{
+    width:      700px;
+    margin-left: 20px;
+}
+div.rained_out p
+{
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<div class="cerad_zayso_header">
+    <a href="http://apps.ayso.org/ng/" target="_blank">
+        <img src="/bundles/ceradzayso/images/NatGames2014Logo.png" 
+             alt="National Games 2014 Site" 
+             width="100" height="100" style="float: left">
+    </a>
+    <div style="color:#ef3e33;font-size: 32px;line-height: 28px;float: left;display: block;margin-top: 15px;margin-right: 60px;">
+         <p>2014 AYSO<br>NATIONAL GAMES</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<div class="cerad_zayso_top_menu">
+    <ul class="cerad_zayso_top_menu_left">
+        <li><a href="{{ path('cerad_zayso_welcome')     }}">Welcome</a></li>
+        <li><a href="{{ path('cerad_zayso_text_alerts') }}">Text Alerts</a></li>
+        <li><a href="{{ path('cerad_zayso_classes')     }}">Classes</a></li>
+    </ul>
+    <ul class="cerad_zayso_top_menu_right">
+        <li><a href="{{ path('cerad_zayso_admin')     }}">Admin</a></li>
+        <li><a href="{{ path('cerad_zayso_contact')     }}">Contact</a></li>
+    </ul>
+</div>
+        
+<div class="cerad_zayso_content">
+{% block    cerad_zayso_content %}
+{% endblock cerad_zayso_content %}
+</div>
+
+</body>
+</html>

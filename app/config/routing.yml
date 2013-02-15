@@ -1,0 +1,31 @@
+
+cerad_zayso_index:
+  path: /
+  defaults:  { _controller: CeradZaysoBundle:Main:index }
+  
+cerad_zayso_welcome:
+  path: /welcome
+  defaults:  { _controller: CeradZaysoBundle:Main:welcome }
+  
+cerad_zayso_contact:
+  path: /contact
+  defaults:  { _controller: CeradZaysoBundle:Main:contact }
+  
+cerad_zayso_classes:
+  path: /classes
+  defaults:  { _controller: CeradZaysoBundle:Main:classes }
+  
+cerad_zayso_text_alerts:
+  path: /text-alerts
+  defaults:  { _controller: CeradZaysoBundle:Main:textAlerts }
+  
+cerad_zayso_schedules:
+  path: /schedules
+  defaults:  { _controller: CeradZaysoBundle:Main:schedules }
+  
+# ==============================
+# Admin stuff
+cerad_zayso_admin:
+  path: /admin
+  defaults:  { _controller: CeradZaysoBundle:Main:admin }
+  

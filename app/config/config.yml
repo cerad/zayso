@@ -24,7 +24,11 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-
+    globals:
+      project: %cerad_zayso_project%
+    paths:
+        "%kernel.root_dir%/../src/Cerad/Bundle/ZaysoBundle/Resources/views/%cerad_zayso_project%": project
+        
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
