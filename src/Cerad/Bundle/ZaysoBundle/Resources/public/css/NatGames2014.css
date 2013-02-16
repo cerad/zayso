@@ -76,7 +76,7 @@ div.cerad_zayso_top_menu li
  */
 div.cerad_zayso_content
 {
-    background-image: url('bundles/ceradzayso/images/NatGames2014Beach.jpg');
+    background-image: url('/bundles/ceradzayso/images/NatGames2014Beach.jpg');
     background-color: lightcyan;
     height:           550px;
 }
