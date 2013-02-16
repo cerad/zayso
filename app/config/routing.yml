@@ -1,7 +1,7 @@
 
 cerad_zayso_index:
   path: /
-  defaults:  { _controller: CeradZaysoBundle:Main:index }
+  defaults:  { _controller: CeradZaysoBundle:Main:welcome }
   
 cerad_zayso_welcome:
   path: /welcome
