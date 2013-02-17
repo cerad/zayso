@@ -1,0 +1,19 @@
+{% extends "@project/layout.html.twig" %}
+
+{% block title %}Zayso Results{% endblock %}
+
+{% block cerad_zayso_content %}
+<div class="cerad_zayso_content">
+<h1>Schedule Information</h1>
+<p>
+    TODO: Assuming zayso will be used for scoring then the following links will be available:.
+</p>
+<ul class="vert_list">
+    <li><a href="{{ path('cerad_zayso_results_soccerfest')    }}">Soccerfest   </a>Shows teams who earned their 6 points for participating</li>
+    <li><a href="{{ path('cerad_zayso_results_poolplay')      }}">Pool Play    </a>Pool Play Rounds</li>
+    <li><a href="{{ path('cerad_zayso_results_playoffs')      }}">Playoffs     </a>Quarter/Semi/Finals</li>
+    <li><a href="{{ path('cerad_zayso_results_tournament')    }}">Tournament   </a>Overall Results</li>
+    <li><a href="{{ path('cerad_zayso_results_sportsmanship') }}">Sportsmanship</a>Last but not least</li>
+</ul>
+</div>
+{% endblock %}

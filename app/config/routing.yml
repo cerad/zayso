@@ -23,6 +23,54 @@ cerad_zayso_schedules:
   path: /schedules
   defaults:  { _controller: CeradZaysoBundle:Main:schedules }
   
+cerad_zayso_volunteer_plan:
+  path: /volunteer/plan
+  defaults:  { _controller: CeradZaysoBundle:Main:volunteerPlan }
+  
+cerad_zayso_schedule:
+  path: /schedule
+  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  
+cerad_zayso_schedule_my:
+  path: /schedule/my
+  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  
+cerad_zayso_schedule_team:
+  path: /schedule/team
+  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  
+cerad_zayso_schedule_referee:
+  path: /schedule/referee
+  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  
+cerad_zayso_schedule_volunteer:
+  path: /schedule/volunteer
+  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+
+cerad_zayso_results:
+  path: /results
+  defaults:  { _controller: CeradZaysoBundle:Main:results }
+  
+cerad_zayso_results_soccerfest:
+  path: /results/soccerfest
+  defaults:  { _controller: CeradZaysoBundle:Main:results }
+  
+cerad_zayso_results_poolplay:
+  path: /results/pool-play
+  defaults:  { _controller: CeradZaysoBundle:Main:results }
+  
+cerad_zayso_results_playoffs:
+  path: /results/playoffs
+  defaults:  { _controller: CeradZaysoBundle:Main:results }
+  
+cerad_zayso_results_tournament:
+  path: /results/tournament
+  defaults:  { _controller: CeradZaysoBundle:Main:results }
+  
+cerad_zayso_results_sportsmanship:
+  path: /results/sportsmanship
+  defaults:  { _controller: CeradZaysoBundle:Main:results }
+
 # ==============================
 # Admin stuff
 cerad_zayso_admin:

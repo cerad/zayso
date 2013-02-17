@@ -9,8 +9,6 @@ class CeradZaysoBundle extends Bundle
 {   
     public function getContainerExtension()
     {
-        if (!$this->extension) return $this->extension;
-        
         return new ZaysoExtension();
     }
 }   

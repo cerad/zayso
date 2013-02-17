@@ -1,0 +1,18 @@
+{% extends "@project/layout.html.twig" %}
+
+{% block title %}Zayso Schedule{% endblock %}
+
+{% block cerad_zayso_content %}
+<div class="cerad_zayso_content">
+<h1>Schedule Information</h1>
+<p>
+    TODO: Assuming zayso will be used for scoring then the following links will be available:.
+</p>
+<ul class="vert_list">
+    <li><a href="{{ path('cerad_zayso_schedule_my')        }}">My Schedule       </a>An individual or family schedule</li>
+    <li><a href="{{ path('cerad_zayso_schedule_team')      }}">Team Schedule     </a>For distributing individual team schedules</li>
+    <li><a href="{{ path('cerad_zayso_schedule_referee')   }}">Referee Schedule  </a>IF we use zayso for referee assinging</li>
+    <li><a href="{{ path('cerad_zayso_schedule_volunteer') }}">Volunteer Schedule</a>IF we use zayso for volunteer assigning</li>
+</ul>
+</div>
+{% endblock %}

@@ -1,5 +1,25 @@
 services:
   
-  # ===============================
-  # Testing commit user
+# ==============================================================
+#   Entity Managers
+    cerad_zayso.project.entity_manager:
+        alias: doctrine.orm.default_entity_manager
+        
+# ==============================================================
+#   My Managers
+    cerad_zayso.project.manager:
+        class:  Cerad\Bundle\ZaysoBundle\Manager\ProjectManager
+        arguments:  
+            - '@cerad_zayso.project.entity_manager'
+            - 'default'
+  
+# ==============================================================
+#   My Form Types
+    cerad_zayso.vol_plan.formtype:
+        class: Cerad\Bundle\ZaysoBundle\Form\Type\VolPlanFormType
+        arguments:  
+            - 'cerad_zayso_vol_plan'
+            - '@cerad_zayso.project.manager'
+        tags:
+            - { name: form.type, alias: cerad_zayso_vol_plan }
   
