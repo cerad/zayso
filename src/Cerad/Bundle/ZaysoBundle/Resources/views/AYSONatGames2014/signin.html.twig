@@ -1,0 +1,10 @@
+{% extends "@project/layout.html.twig" %}
+
+{% block title %}Zayso Signin{% endblock %}
+
+{% block cerad_zayso_content %}
+<h3>User Signin Form</h3>
+{{ render(controller('CeradZaysoBundle:Security:signinForm')) }}
+
+{% endblock cerad_zayso_content %}
+

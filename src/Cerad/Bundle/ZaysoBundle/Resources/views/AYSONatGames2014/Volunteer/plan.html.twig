@@ -13,11 +13,8 @@
 <p>
     This is focused on the referee team for now but other volunter positions (field marshalls etc) could be added and tracked.
 </p>
-<form>
-<fieldset>
-    {{ form_rest(form) }}
-</fieldset>
-</form>
+{# include('@project/Volunteer/plan_form.html.twig') #}
+{{ render(controller('CeradZaysoBundle:Main:volunteerPlanForm', { 'projectKey': projectKey })) }}
 <p>TODO: Add some more details for certain fields.  Could also get a little fancy with javascript and only show certain fields.</p>
 </div>
 {% endblock cerad_zayso_content %}

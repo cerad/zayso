@@ -2,6 +2,7 @@
 namespace Cerad\Bundle\ZaysoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 use Cerad\Bundle\ZaysoBundle\Model\VolPlan;
 
@@ -19,7 +20,20 @@ class MainController extends Controller
         
         return $this->render('@project/welcome.html.twig', $tplData);
     }
-    public function textAlertsAction()
+    public function homeAction()
+    {
+        die('homeAction');
+        $tplData = array();
+        
+        return $this->render('@project/home.html.twig', $tplData);
+    }
+    public function userHeaderAction()
+    {
+        $tplData = array();
+        
+        return $this->render('@project/user_header.html.twig', $tplData);
+   }
+   public function textAlertsAction()
     {
         $tplData = array();
         
@@ -46,13 +60,39 @@ class MainController extends Controller
         $tplData = array();
         return $this->render('@project/Results/index.html.twig', $tplData);
     }
-    public function volunteerPlanAction()
+    protected function getProjectKey(Request $request, $projectKey = null)
     {
+        if ($projectKey) return $projectKey;
+        
+        $projectKey = $request->attributes->get('projectKey');
+        
+        if ($projectKey) return $projectKey;
+        
+        $projectKey = $this->container->getParameter('cerad_zayso_project');
+        
+        return $projectKey;
+       
+    }
+    public function volunteerPlanAction(Request $request, $projectKey = null)
+    {
+        $projectKey = $this->getProjectKey($request,$projectKey);
+        
+        // The form is called using an embedded ontroller
+        $tplData = array();
+        $tplData['projectKey'] = $projectKey;
+        
+      //$tplData['form'] = $form->createView();
+        return $this->render('@project/Volunteer/plan.html.twig', $tplData);
+    }
+    public function volunteerPlanFormAction(Request $request, $projectKey = null)
+    {
+        $projectKey = $this->getProjectKey($request,$projectKey);
+         
         // Setup the project manager
-        $projects       = $this->container->getParameter('cerad_zayso_projects');
-        $projectKey     = $this->container->getParameter('cerad_zayso_project');
-        $projectManager = $this->container->get         ('cerad_zayso.project.manager'); 
-        $projectManager->setProjectmetaData($projects[$projectKey]);
+        $projects = $this->container->getParameter('cerad_zayso_projects');
+        
+        $projectManager = $this->container->get('cerad_zayso.project.manager'); 
+        $projectManager->setProjectMetaData($projects[$projectKey]);
         
         // The form
         $volPlan = new VolPlan($projects[$projectKey]['plan']);
@@ -61,7 +101,7 @@ class MainController extends Controller
         
         $tplData = array();
         $tplData['form'] = $form->createView();
-        return $this->render('@project/Volunteer/plan.html.twig', $tplData);
+        return $this->render('@project/Volunteer/plan_form.html.twig', $tplData);
     }
     public function adminAction()
     {

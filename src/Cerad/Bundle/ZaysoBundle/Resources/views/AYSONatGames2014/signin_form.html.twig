@@ -1,0 +1,17 @@
+<form action="{{ path('cerad_zayso_signin_check') }}" method="post">
+    
+    <input type="hidden" name="_csrf_token" value="{{ signin_csrf_token }}" />
+    
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="_username" value="{{ signin_last_username }}" />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="_password" />
+    
+    <label for="remember_me">Remember Me</label>
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" checked />
+
+    <button type="submit">Signin</button>
+</form>
+
+
