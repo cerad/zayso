@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             
             new Cerad\Bundle\ZaysoBundle\CeradZaysoBundle(),
+            new Cerad\Bundle\Legacy2012Bundle\CeradLegacy2012Bundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

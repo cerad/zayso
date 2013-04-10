@@ -5,6 +5,8 @@ parameters:
     database_name:     symfony
     database_user:     root
     database_password: ~
+    
+    database_name_legacy2012:  osso2012x
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1

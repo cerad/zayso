@@ -112,6 +112,4 @@ cerad_zayso_search:
 cerad_zayso_search_form:
     pattern:  /search/form
     defaults: { _controller: CeradZaysoBundle:Main:searchForm }
-    
-   
 

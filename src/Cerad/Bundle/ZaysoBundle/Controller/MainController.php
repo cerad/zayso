@@ -52,8 +52,14 @@ class MainController extends Controller
     }
     public function scheduleAction()
     {
+        $manager = $this->get('cerad_legacy2012.game.manager');
+        
+        $games = $manager->loadGamesForDate('20120706');
+        
         $tplData = array();
-        return $this->render('@project/Schedule/index.html.twig', $tplData);
+        $tplData['games'] = $games;
+        
+        return $this->render('@project/Schedule/schedule.html.twig', $tplData);
     }
     public function resultsAction()
     {
