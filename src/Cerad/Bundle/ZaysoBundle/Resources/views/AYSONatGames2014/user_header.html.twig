@@ -1,5 +1,8 @@
 {% if is_granted('ROLE_USER') %}
 <h3> User Name: {{ app.user.username }} </h3>
+<form id="zayso_signout_form" action="{{ path('cerad_zayso_signout') }}" method="post">
+<button type="submit">Signout</button>
+</form>
 {% else %}
 <h3> User Name: Guest </h3>
 {% endif %}
