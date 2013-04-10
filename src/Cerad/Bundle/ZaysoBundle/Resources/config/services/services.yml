@@ -22,4 +22,9 @@ services:
             - '@cerad_zayso.project.manager'
         tags:
             - { name: form.type, alias: cerad_zayso_vol_plan }
+            
+    cerad_zayso.search.formtype:
+        class: Cerad\Bundle\ZaysoBundle\Form\Type\SearchFormType
+        tags:
+            - { name: form.type, alias: cerad_zayso_search }
   

@@ -104,5 +104,14 @@ cerad_zayso_home:
 cerad_zayso_user_header:
     pattern:  /user/header
     defaults: { _controller: CeradZaysoBundle:Main:userHeader }
+    
+cerad_zayso_search:
+    pattern:  /search
+    defaults: { _controller: CeradZaysoBundle:Main:search }
+   
+cerad_zayso_search_form:
+    pattern:  /search/form
+    defaults: { _controller: CeradZaysoBundle:Main:searchForm }
+    
    
 

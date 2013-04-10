@@ -109,5 +109,44 @@ class MainController extends Controller
         
         return $this->render('@project/Admin/index.html.twig', $tplData);
     }
+    public function searchAction(Request $request)
+    {
+        if ($request->getMethod() == 'POST')
+        {
+            $item = array('param1' => 'default1');
+            $formType = $this->container->get('cerad_zayso.search.formtype');
+            $form = $this->createForm($formType,$item);
+            $form->bind($request);
+            if ($form->isValid())
+            {
+                $item = $form->getData(); //print_r($item); die( 'POSTED');
+                
+                $request->getSession()->set('search',$item);
+                
+              //return $this->searchFormAction($request);                
+                return $this->redirect($this->generateUrl('cerad_zayso_search'));      
+            }
+            else die('not valid');
+        }
+        $tplData = array();
+        return $this->render('@project/search.html.twig', $tplData);
+    }
+    public function searchFormAction(Request $request)
+    {
+        $session = $request->getSession();
+ 
+        $item = array('param1' => 'default1');
+        if ($session->has('search'))
+        {
+            $item = array_merge($item,$session->get('search'));
+        }
+        $formType = $this->container->get('cerad_zayso.search.formtype');
+        $form = $this->createForm($formType,$item);
+         
+        $tplData = array();
+        $tplData['form'] = $form->createView();
+        return $this->render('@project/search_form.html.twig', $tplData);
+    }
+
 }
 ?>
