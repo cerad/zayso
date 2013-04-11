@@ -170,6 +170,6 @@ parameters:
 
          AvailSunAfter:
            type:    select
-           label:   Available Sunday Afternoon (Quarter Finals)
+           label:   Available Sunday Afternoon (Finals)
            default: no
            choices: { no: No, yes: Yes, maybe: Yes - If My Team Advances}
