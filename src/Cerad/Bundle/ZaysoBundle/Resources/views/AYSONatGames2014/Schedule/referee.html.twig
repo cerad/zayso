@@ -13,7 +13,7 @@
         <td>DOW Time</td>
         <td>Field</td>
         <td>Pool</td>
-        <td>Teams Home/Ayay</td>
+        <td>Teams Home/Away</td>
         <td>Officials</td>
     </tr>
     {% for game in games %}
@@ -29,7 +29,7 @@
             <table>
             {% set persons = game.eventPersons %}
             {% for person in persons %}
-                <tr><td>{{ person.type }}</td><td>{{ person.personName }}</td></tr>
+                <tr><td>{{ person.type }}</td><td>&nbsp;</td><td>{{ person.personName }}</td></tr>
             {% endfor %}
             </table>
         </td>
