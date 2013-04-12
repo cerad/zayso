@@ -33,7 +33,7 @@ cerad_zayso_volunteer_plan_form:
   
 cerad_zayso_schedule:
   path: /schedule
-  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  defaults:  { _controller: CeradZaysoBundle:Main:scheduleTeam }
   
 cerad_zayso_schedule_my:
   path: /schedule/my
@@ -41,11 +41,11 @@ cerad_zayso_schedule_my:
   
 cerad_zayso_schedule_team:
   path: /schedule/team
-  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  defaults:  { _controller: CeradZaysoBundle:Main:scheduleTeam }
   
 cerad_zayso_schedule_referee:
   path: /schedule/referee
-  defaults:  { _controller: CeradZaysoBundle:Main:schedule }
+  defaults:  { _controller: CeradZaysoBundle:Main:scheduleReferee }
   
 cerad_zayso_schedule_volunteer:
   path: /schedule/volunteer

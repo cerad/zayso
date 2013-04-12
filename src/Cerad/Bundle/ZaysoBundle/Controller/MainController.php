@@ -61,6 +61,28 @@ class MainController extends Controller
         
         return $this->render('@project/Schedule/schedule.html.twig', $tplData);
     }
+    public function scheduleTeamAction()
+    {
+        $manager = $this->get('cerad_legacy2012.game.manager');
+        
+        $games = $manager->loadGamesForDate('20120706');
+        
+        $tplData = array();
+        $tplData['games'] = $games;
+        
+        return $this->render('@project/Schedule/schedule.html.twig', $tplData);
+    }
+    public function scheduleRefereeAction()
+    {
+        $manager = $this->get('cerad_legacy2012.game.manager');
+        
+        $games = $manager->loadGamesForDate('20120706');
+        
+        $tplData = array();
+        $tplData['games'] = $games;
+        
+        return $this->render('@project/Schedule/referee.html.twig', $tplData);
+    }
     public function resultsAction()
     {
         $tplData = array();
