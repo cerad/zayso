@@ -9,3 +9,7 @@ Application for managing the AYSO turnaments including:
 
 Still very much a work in progress.  
 
+Tagged to archive old and no longer needed code.
+
+Only thing being kept is the web directory which is used as a destination
+for my virtual host.
