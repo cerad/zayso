@@ -1,8 +1,7 @@
 <?php
 error_reporting(E_ALL);
 
-define('CERAD_TOURN_IFRAME',     true);
-define('CERAD_TOURN_SHOW_HEADER',false);
+define('CERAD_TOURN_SHOW_CONFIG','default');
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;

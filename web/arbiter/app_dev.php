@@ -1,8 +1,6 @@
 <?php
 error_reporting(E_ALL);
 
-define('CERAD_TOURN_SHOW_CONFIG','rick');
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
 
@@ -19,14 +17,14 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     header('HTTP/1.0 403 Forbidden');
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
-require_once __DIR__.'/../../../aysonatgames/app/bootstrap.php.cache';
-Debug::enable();
-require_once __DIR__.'/../../../aysonatgames/app/AppKernel.php';
+require_once __DIR__.'/../../../arbiter/app/bootstrap.php.cache';
+//Debug::enable(); // Because of S2.1
+require_once __DIR__.'/../../../arbiter/app/AppKernel.php';
 
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
 
-Request::enableHttpMethodParameterOverride();
+//Request::enableHttpMethodParameterOverride(); Because of S2.1
 $request = Request::createFromGlobals();
 
 $response = $kernel->handle($request);
