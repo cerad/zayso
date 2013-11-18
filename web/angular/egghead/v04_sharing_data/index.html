@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyAngular</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/angular/vendor/angular.min.js"></script>
+        <script src="/angular/egghead/v04_sharing_data/main.js"></script>
+    </head>
+    <body>
+        <div><a href="/angular/index.html">Back to home</a></div>
+        <h3><a href="http://egghead.io/lessons/angularjs-sharing-data-between-controllers">
+            Egghead AngularJS V04 Sharing Data Between Controllers
+        </a></h3>
+        
+        <div ng-app="myApp">
+            <div ng-controller="FirstCtrl">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{data.message + " world"}}</h1>
+            </div>
+            <div ng-controller="SecondCtrl">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{data.message + " world"}}</h1>
+            </div>
+        </div>
+    </body>
+</html>

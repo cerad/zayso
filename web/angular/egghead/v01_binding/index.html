@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyAngular</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/angular/vendor/angular.min.js"></script>
+    </head>
+    <body>
+        <div><a href="/angular/index.html">Back to home</a></div>
+        <h3><a href="http://egghead.io/lessons/angularjs-binding">Egghead AngularJS V01 Binding</a></h3>
+        
+        <div ng-app="">
+        <p>
+            {{3 * 3}}
+            {{ "Hello" + "There" }}
+        </p>
+            <input type="text" ng-model="data.message"/>
+            <h1>{{data.message}}</h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyAngular</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/angular/vendor/angular.min.js"></script>
+        <script src="/angular/egghead/v06_filters/main.js"></script>
+    </head>
+    <body>
+        <div><a href="/angular/index.html">Back to home</a></div>
+        <h3> <a href="http://egghead.io/lessons/angularjs-testing-overview">
+            Egghead AngularJS V05 Egghead AngularJS V07 Testing Overview
+        </a></h3>
+        <p>
+            Not implemented.  Need to install testing infrastructure.
+        </p>
+        <p>
+            Pulled jasmine from: https://github.com/pivotal/jasmine/downloads
+            Unzipped and ran SpecRunner.html from browser.
+            Do I neeed this testecular stuff?
+        </p>
+        <div ng-app="myApp">
+            <div ng-controller="FirstCtrl">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{data.message + " W1orld"}}</h1>
+            </div>
+            <div ng-controller="SecondCtrl">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{ data.message + " W2orld" | reverse }}</h1>
+            </div>
+        </div>
+    </body>
+</html>

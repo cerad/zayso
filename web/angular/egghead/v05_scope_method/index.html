@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyAngular</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/angular/vendor/angular.min.js"></script>
+        <script src="/angular/egghead/v05_scope_method/main.js"></script>
+    </head>
+    <body>
+        <div><a href="/angular/index.html">Back to home</a></div>
+        <h3> <a href="http://egghead.io/lessons/angularjs-defining-a-method-on-the-scope">
+            Egghead AngularJS V05 Egghead AngularJS V05 Defining a method on the scope
+        </a></h3>
+        
+        <div ng-app="myApp">
+            <div ng-controller="FirstCtrl">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{data.message + " world"}}</h1>
+            </div>
+            <div ng-controller="SecondCtrl">
+                <input type="text" ng-model="data.message"/>
+                <h1>{{reversedMessage(data.message) + " world"}}</h1>
+            </div>
+        </div>
+    </body>
+</html>
