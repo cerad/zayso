@@ -1,5 +1,18 @@
 var myApp = angular.module('myApp',[]);
 
+myApp.factory("Avengersx",function($http)
+{
+    var avengers = {};
+    
+    $http.get('avengers.json').success(function(data) 
+    {
+        avengers.cast = data;
+    });
+    
+    return avengers;
+});
+
+ 
 myApp.factory("Avengers",function()
 {
     var Avengers = {};
@@ -70,7 +83,7 @@ myApp.factory("Avengers",function()
     return Avengers;
 });
 
-function AvengersCtrl($scope, Avengers)
+function AvengersCtrl($scope, Avengersx)
 {
-    $scope.avengers = Avengers;
+    $scope.avengers = Avengersx;
 }
