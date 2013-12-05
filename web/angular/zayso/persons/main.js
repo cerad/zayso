@@ -1,6 +1,9 @@
 var myApp = angular.module('myApp',[]);
 
-myApp.factory("Persons",function($http)
+/* ====================================================
+ * TODO: Want to use resource instead of http
+ */
+myApp.factory("PersonsFactory",function($http)
 {
     var persons = {};
     
@@ -12,7 +15,7 @@ myApp.factory("Persons",function($http)
     return persons;
 });
 
-function PersonsCtrl($scope, Persons)
+function PersonsController($scope, PersonsFactory)
 {
-    $scope.persons = Persons;
+    $scope.persons = PersonsFactory;
 }
