@@ -15,18 +15,30 @@
         <input type="text" ng-model="search.name_full"/>
         <table border="1">
             <tr>
+                <th>I</th>
                 <th>ID</th>
                 <th>Full  Name</th>
                 <th>First Name</th>
                 <th>Last  Name</th>
                 <th>DOB</th>
+                <th>AYSOID</th>
+                <th>Ref Badge</th>
+                <th>Safe Haven</th>
+                <th>Region</th>
+                <th>Mem Year</th>
             </tr>
             <tr ng-repeat="person in persons.list | filter:search">
-                <td>{{ person.id }}        </td>
-                <td>{{ person.name_full  }}</td>
-                <td>{{ person.name_first }}</td>
-                <td>{{ person.name_last  }}</td>
-                <td>{{ person.dob }}       </td>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ person.id }}         </td>
+                <td>{{ person.name_full   }}</td>
+                <td>{{ person.name_first  }}</td>
+                <td>{{ person.name_last   }}</td>
+                <td>{{ person.dob }}        </td>
+                <td>{{ person.getFed('AYSOV').id }}</td>
+                <td>{{ person.getFed('AYSOV').getCert('Referee').badge   }}</td>
+                <td>{{ person.getFed('AYSOV').getCert('SafeHaven').badge }}</td>
+                <td>{{ person.getFed('AYSOV').getOrg ('Region').orgId    }}</td>
+              <td>MY{{ person.getFed('AYSOV').getOrg ('Region').memYear  }}</td>
             </tr>
         </table>
     </div>
