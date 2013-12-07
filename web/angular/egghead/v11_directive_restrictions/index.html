@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyAngular</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/angular/vendor/foundation/css/foundation.min.css"/>
+</head>
+<body>
+    
+<div><a href="/angular/index.html">Back to home</a></div>
+<h3> <a href="http://egghead.io/lessons/angularjs-directive-restrictions">
+    Egghead AngularJS V11 Directive Restrictions
+</a></h3>
+        
+<!-- Use _,-,: for camelCase -->
+<div ng-app="superhero">
+    <superman_element></superman_element>
+    <div superman:attribute></div>
+    <div class="superman-class"></div>
+</div>
+        
+<script type="text/javascript" src="/angular/vendor/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
