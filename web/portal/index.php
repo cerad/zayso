@@ -25,10 +25,21 @@
     <p>Please click on one of the following AYSO/USSF game/referee scheduling sites:</p>
     <ul>
       <li>
-        <a href="<?php echo $host; ?>arbiter/tourn/kicks">
-            USSF HFC Kicks 2013 - Huntsville, Alabama - October 18, 19, 20
+        <a href="<?php echo $host; ?>arbiter/tourn/classic">
+            USSF HFC Classic 2014 - Huntsville, Alabama - April 4,5,6
         </a>
       </li>
+      <li>
+        <a href="<?php echo $host; ?>arbiter/tourn/opencup">
+            USSF Open Cup 2014 - Decatur, Alabama - April 11,12,13
+        </a>
+      </li>
+      <li>
+        <a href="http://2014nationalgames.org/" target="_blank">
+            AYSO National Games 2014 - Riverside/Torrance California - April 11,12,13
+        </a>
+      </li>
+      <?php if (false) { ?>
       <li>
         <a href="<?php echo $host; ?>arbiter/tourn/statecup">
             USSF Alabama State Cup Preliminaries - Fall 2013 - Decatur, Alabama - Nov 1, 2, 3
@@ -39,7 +50,8 @@
             USSF Alabama State Cup Final Four AND Governor's Cup - Fall 2013 - Montgomery, Alabama - Nov 8, 9, 10
         </a>
       </li>
-      <!-- 
+      <?php } ?>
+      <?php if (false) { ?>
       <li>
         <a href="<?php echo $host; ?>area5c">AYSO Area 5C/F, North Alabama, Fall 2012</a>
       </li>
@@ -61,7 +73,7 @@
        <li>
         <a href="<?php echo $host; ?>arbiter/tourn/statecupff">USSF AL State Cup Final Four 2012, Decatur Alabama, May 11-13</a>
       </li>
-      -->
+      <?php } ?>
     </ul>
     </body>
 </html>
