@@ -36,7 +36,7 @@
       </li>
       <li>
         <a href="http://2014nationalgames.org/" target="_blank">
-            AYSO National Games 2014 - Riverside/Torrance California - April 11,12,13
+            AYSO National Games 2014 - Riverside/Torrance California - July 2,3,4,5,6
         </a>
       </li>
       <?php if (false) { ?>
