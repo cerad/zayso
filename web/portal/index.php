@@ -24,11 +24,10 @@
     <h1>Welcome to the Zayso Portal</h1>
     <p>Please click on one of the following AYSO/USSF game/referee scheduling sites:</p>
     <ul>
-      <li>
-        <a href="<?php echo $host; ?>arbiter/tourn/classic">
-            USSF HFC Classic 2014 - Huntsville, Alabama - April 4,5,6
-        </a>
-      </li>
+      <li><a href="<?php echo $host; ?>arbiter/tourn/classic">
+        USSF HFC Classic 2014 - Huntsville, Alabama - April 4,5,6
+      </a></li>
+      
       <li>
         <a href="<?php echo $host; ?>arbiter/tourn/opencup">
             USSF Open Cup 2014 - Decatur, Alabama - April 11,12,13
@@ -44,16 +43,22 @@
             USSF Alabama State Cup Final Four - Spring 2014 - Decatur, Alabama - May 9,10,11
         </a>
       </li>
-      <li>
-        <a href="<?php echo $host; ?>arbiter/tourn/presidentscup">
-            USSF Region III President's Cup - Spring 2014 - Decatur, Alabama - June 12,13,14,15,16
-        </a>
-      </li>
-      <li>
-        <a href="http://2014nationalgames.org/" target="_blank">
-            AYSO National Games 2014 - Riverside/Torrance California - July 2,3,4,5,6
-        </a>
-      </li>
+      <li><a href="<?php echo $host; ?>arbiter/tourn/presidentscup">
+        USSF Region III President's Cup - Spring 2014 - Decatur, Alabama - June 12,13,14,15,16
+      </a></li>
+      
+      <li><a href="http://2014nationalgames.org/" target="_blank">
+        AYSO National Games 2014 - Riverside/Torrance California - July 2,3,4,5,6
+      </a></li>
+      
+      <li><a href="http://ayso1ref.com/s1_games/zayso" target="_blank">
+        AYSO Section One U10/U12/U14 Games -- Ab Brown Complex, Riverside -- 22-23 Feb & 1-2 Mar 2014
+      </a></li>
+      
+      <li><a href="http://zayso.org/arbiter/schedule" target="_blank">
+        Alabama Arbiter (NASOA/ALYS) Game Schedules and Scores
+      </a></li>
+      
       <?php if (false) { ?>
       <li>
         <a href="<?php echo $host; ?>area5c">AYSO Area 5C/F, North Alabama, Fall 2012</a>
