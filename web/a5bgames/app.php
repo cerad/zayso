@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 date_default_timezone_set('America/Chicago');
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
 
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information
@@ -20,6 +21,7 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 require_once __DIR__.'/../../../aysoa5bgames/app/bootstrap.php.cache';
+Debug::enable();
 require_once __DIR__.'/../../../aysoa5bgames/app/AppKernel.php';
 
 $kernel = new AppKernel('dev', true);
